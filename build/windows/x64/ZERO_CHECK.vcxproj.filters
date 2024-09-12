@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\CMakeFiles\ae0040839c73e8fcfb7400b12f30a50f\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{59D73316-5B9B-367E-A3E6-48D93EA416AC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

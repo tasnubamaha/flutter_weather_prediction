@@ -1,0 +1,10 @@
+^C:\USERS\DELL\FLUTTER_PRACTISE\WEATHER_PREDICTION\BUILD\WINDOWS\X64\CMAKEFILES\AE0040839C73E8FCFB7400B12F30A50F\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

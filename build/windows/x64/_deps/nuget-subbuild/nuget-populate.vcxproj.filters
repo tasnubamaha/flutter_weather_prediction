@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-copyfile.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\81b8fa2191fdeed6ac47882917b697ed\nuget-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\bce5223927d2939b62dafd65d98315fb\nuget-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\7ca7b4ba5b3f78256b5e277ac27aea59\nuget-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Dell\flutter_practise\weather_prediction\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\nuget-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3874379D-9F1F-3064-AEFE-0BB216A0F40F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
