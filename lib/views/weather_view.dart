@@ -20,19 +20,36 @@ class WeatherView extends StatelessWidget {
     return weather;
   }
 
+  // String getWeatherAnimation(String? mainCondition) {
+  //   if (mainCondition == null) return "assets/sunny_weather.json";
+  //   switch (mainCondition.toLowerCase()) {
+  //     case "clouds":
+  //       return "assets/cloudy_weather.json";
+  //     case "rain":
+  //       return "assets/rainy_weather.json";
+  //     case "clear":
+  //       return "assets/sunny_weather.json";
+  //     case "thunderstorm":
+  //       return 'assets/rainy_and_stormy_weather.json';
+  //     default:
+  //       return "assets/sunny_weather.json";
+  //   }
+  // }
+
   String getWeatherAnimation(String? mainCondition) {
     if (mainCondition == null) return "assets/sunny_weather.json";
-    switch (mainCondition.toLowerCase()) {
-      case "clouds":
-        return "assets/coudy_weather.json";
-      case "rain":
-        return "assets/rainy_weather.josn";
-      case "clear":
-        return "assets/sunny_weather.json";
-      case "thunderstorm":
-        return 'assets/rainy_and_stormy_weather.json';
-      default:
-        return "assets/sunny_weather.json";
+    final condition = mainCondition.toLowerCase();
+
+    if (condition.contains("cloud")) {
+      return "assets/cloudy_weather.json";
+    } else if (condition.contains("rain")) {
+      return "assets/rainy_weather.json";
+    } else if (condition.contains("clear")) {
+      return "assets/sunny_weather.json";
+    } else if (condition.contains("thunderstorm")) {
+      return 'assets/rainy_and_stormy_weather.json';
+    } else {
+      return "assets/sunny_weather.json";
     }
   }
 
