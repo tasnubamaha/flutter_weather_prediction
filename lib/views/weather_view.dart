@@ -1,57 +1,10 @@
-import 'dart:developer';
-
-import 'package:weather_prediction/models/weather_model.dart';
-import 'package:weather_prediction/services/weather_service.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:weather_prediction/models/weather_model.dart';
+import 'package:weather_prediction/utils/weather_view_service.dart';
 
 class WeatherView extends StatelessWidget {
-  WeatherView({super.key});
-
-  final weatherService = AppWeatherService();
-
-  Future<WeatherModel?> fetchWeather() async {
-    late WeatherModel weather;
-    try {
-      weather = await weatherService.getWeather();
-    } catch (e) {
-      log(e.toString());
-    }
-    return weather;
-  }
-
-  // String getWeatherAnimation(String? mainCondition) {
-  //   if (mainCondition == null) return "assets/sunny_weather.json";
-  //   switch (mainCondition.toLowerCase()) {
-  //     case "clouds":
-  //       return "assets/cloudy_weather.json";
-  //     case "rain":
-  //       return "assets/rainy_weather.json";
-  //     case "clear":
-  //       return "assets/sunny_weather.json";
-  //     case "thunderstorm":
-  //       return 'assets/rainy_and_stormy_weather.json';
-  //     default:
-  //       return "assets/sunny_weather.json";
-  //   }
-  // }
-
-  String getWeatherAnimation(String? mainCondition) {
-    if (mainCondition == null) return "assets/sunny_weather.json";
-    final condition = mainCondition.toLowerCase();
-
-    if (condition.contains("cloud")) {
-      return "assets/cloudy_weather.json";
-    } else if (condition.contains("rain")) {
-      return "assets/rainy_weather.json";
-    } else if (condition.contains("clear")) {
-      return "assets/sunny_weather.json";
-    } else if (condition.contains("thunderstorm")) {
-      return 'assets/rainy_and_stormy_weather.json';
-    } else {
-      return "assets/sunny_weather.json";
-    }
-  }
+  const WeatherView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,20 +16,44 @@ class WeatherView extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Container();
             } else {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Lottie.asset(
-                      getWeatherAnimation(snapshot.data?.weatherCondition)),
-                  Text(snapshot.data?.weatherCondition ??
-                      "Loading weather condition ..."),
-                  Text(snapshot.data?.cityName ?? "Loading city ..."),
-                  Text(
-                      "${snapshot.data?.temperature.round() ?? "Loading Temparature ..."}°C")
-                ],
-              );
+              return MainContent(weatherModel: snapshot.data);
             }
           }),
     ));
+  }
+}
+
+class MainContent extends StatelessWidget {
+  final WeatherModel? weatherModel;
+  const MainContent({
+    super.key,
+    this.weatherModel,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(
+          height: 20,
+        ),
+        Lottie.asset(getWeatherAnimation(weatherModel?.weatherCondition)),
+        Text(
+          weatherModel?.weatherCondition ?? "Loading weather condition ...",
+          style: const TextStyle(fontWeight: FontWeight.w100),
+        ),
+        const Spacer(),
+        Text(
+          "${weatherModel?.temperature.round() ?? "Loading Temparature ..."}°C",
+          style: const TextStyle(fontSize: 80, fontWeight: FontWeight.w700),
+        ),
+        Text(
+          weatherModel?.cityName ?? "Loading city ...",
+          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.w100),
+        ),
+        const Spacer(flex: 8),
+      ],
+    );
   }
 }
